@@ -36,11 +36,7 @@ install_list=(
 
 for package in "${install_list[@]}"
 do
-<<<<<<< HEAD
         echo yes | apt-get install "${package}"
-=======
-	echo yes | apt-get install "${package}"
->>>>>>> da55402935f093e5d3c6f78d501d84c3b2cbee58
 done
 
 # build #
