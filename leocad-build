@@ -17,26 +17,26 @@ source="https://github.com/leozide/leocad.git"
 # packages #
 
 install_list=(
-        git
-        hub
-        g++
-        make
-        zlib1g-dev
-        libqt5concurrent5
-        libqt5opengl5
-        libqt5opengl5-dev
-        libqt5printsupport5
-        libqt5xml5
-        qt5-default
-        qttools5-dev
-        qttools5-dev-tools
+	git
+	hub
+	g++
+	make
+	zlib1g-dev
+	libqt5concurrent5
+	libqt5opengl5
+	libqt5opengl5-dev
+	libqt5printsupport5
+	libqt5xml5
+	qt5-default
+	qttools5-dev
+	qttools5-dev-tools
 )
 
 # install #
 
 for package in "${install_list[@]}"
 do
-        echo yes | apt-get install "${package}"
+	echo yes | apt-get install "${package}"
 done
 
 # build #
