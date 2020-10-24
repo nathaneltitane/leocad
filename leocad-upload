@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# dependencies #
+
+# usage #
+
+# variables #
+
+script=$(basename -- "${BASH_SOURCE[0]}")
+
+home="/home/${SUDO_USER:-$USER}"
+
+git_directory="/tmp/git"
+
+application="leocad"
+repository="https://github.com/nathaneltitane/leocad.git"
+
+# load #
+
+mkdir -p "${git_directory}"
+
+cd "${git_directory}" || exit 1
+
+git clone "${repository}"
+
+# update #
+
+cp /usr/bin/"${application}" "${git_directory}"/"${application}"/"${application}"
+
+# upload #
+
+git add *
+
+git commit -a -m "Build update"
+
+git push
+
+# clean #
+
+# remove git directory
+
+rm -rf "${git_directory}"/*
