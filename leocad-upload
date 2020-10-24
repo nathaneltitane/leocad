@@ -27,14 +27,6 @@ git clone "${repository}"
 
 cp /usr/bin/"${application}" "${git_directory}"/"${application}"/"${application}"
 
-# upload #
-
-git add *
-
-git commit -a -m "Build update"
-
-git push
-
 # clean #
 
 # remove git directory

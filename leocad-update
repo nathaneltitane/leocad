@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# dependencies #
+
+# usage #
+
+# variables #
+
+scripts_list=(
+	leocad-build
+	leocad-upload
+)
+
+# run scripts
+
+for script in ${scripts_list[@]}
+do
+	bash ${script}
+done
+
+# upload changes
+
+git add *
+
+git commit -a -m 'Build update'
+
+git push
