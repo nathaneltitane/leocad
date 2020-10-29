@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# dependencies #
+
+source /data/data/com.termux/files/usr/bin/console
+source /data/data/com.termux/files/usr/bin/globals
+
+# usage #
+
+# variables #
+
+script=$(basename -- "${BASH_SOURCE[0]}")
+
+# get #
+
+console.get https://raw.githubusercontent.com/nathaneltitane/leocad/main leocad /usr/bin
