@@ -56,7 +56,7 @@ qmake "${application}".pro
 
 # compile binary
 
-make -s
+make -j$(nproc)
 
 # update #
 
