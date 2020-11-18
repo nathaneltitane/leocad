@@ -66,4 +66,4 @@ cp "${build_directory}"/build/release/"${application}" /usr/bin/"${application}"
 
 # remove build directory
 
-rm -rf "${build_directory}"/*
+rm -rf "${build_directory}"
