@@ -17,11 +17,3 @@ for script in ${scripts_list[@]}
 do
 	bash ${script}
 done
-
-# upload changes
-
-git add *
-
-git commit -a -m 'Build update'
-
-git push

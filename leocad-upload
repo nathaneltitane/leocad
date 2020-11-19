@@ -32,3 +32,11 @@ git clone "${repository}"
 # update #
 
 cp /usr/bin/"${application}" "${git_directory}"/"${application}"/"${application}"
+
+# upload changes
+
+git add *
+
+git commit -a -m "Build update"
+
+git push
