@@ -42,6 +42,12 @@ do
 	echo yes | apt-get install "${package}"
 done
 
+# clean #
+
+# remove previous instance of build directory
+
+rm -rf "${build_directory}"
+
 # build #
 
 mkdir -p "${build_directory}"
@@ -61,9 +67,3 @@ make -j$(nproc)
 # update #
 
 cp "${build_directory}"/build/release/"${application}" /usr/bin/"${application}"
-
-# clean #
-
-# remove build directory
-
-rm -rf "${build_directory}"
