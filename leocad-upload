@@ -31,4 +31,4 @@ cp /usr/bin/"${application}" "${git_directory}"/"${application}"/"${application}
 
 # remove git directory
 
-#rm -rf "${git_directory}"/*
+# rm -rf "${git_directory}"/*
