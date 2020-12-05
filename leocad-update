@@ -8,7 +8,6 @@
 
 scripts_list=(
 	leocad-build
-	leocad-upload
 )
 
 # run scripts
@@ -17,3 +16,15 @@ for script in ${scripts_list[@]}
 do
 	bash ${script}
 done
+
+# update binary
+
+cp /usr/bin/leocad ./leocad
+
+# upload changes
+
+git add *
+
+git commit -a -m "Build update"
+
+git push
