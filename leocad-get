@@ -24,3 +24,5 @@ console.get https://raw.githubusercontent.com/nathaneltitane/leocad/main leocad 
 #    --remote-header-name   \
 #    --remote-name          \
 #                           ${url}/download/continuous/${archive}
+
+# unzip ./${archive} -d /usr/bin
