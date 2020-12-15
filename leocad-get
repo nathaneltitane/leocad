@@ -15,7 +15,7 @@ url=https://github.com/leozide/leocad/releases
 selection=$(curl -sL https://api.github.com/repos/leozide/leocad/releases/latest | jq -r '.assets[0].browser_download_url')
 version=$(curl -sL ${url}/tag/continuous | grep LeoCAD-Linux-.*-arm64.zip | sed -e 's|<.*">||' | sed -e 's|<.*>||')
 
-# archive=${selection}
+archive=${selection}
 
 # get #
 
