@@ -11,20 +11,22 @@ source /data/data/com.termux/files/usr/bin/globals
 
 script=$(basename -- "${BASH_SOURCE[0]}")
 
-# get #
-
-console.get https://raw.githubusercontent.com/nathaneltitane/leocad/main leocad /usr/bin
-
-# url=https://github.com/leozide/leocad/releases
-# selection=$(curl -sL https://api.github.com/repos/leozide/leocad/releases/latest | jq -r '.assets[0].browser_download_url')
-# version=$(curl -sL ${url}/tag/continuous | grep LeoCAD-Linux-.*-arm64.zip | sed -e 's|<.*">||' | sed -e 's|<.*>||')
+url=https://github.com/leozide/leocad/releases
+selection=$(curl -sL https://api.github.com/repos/leozide/leocad/releases/latest | jq -r '.assets[0].browser_download_url')
+version=$(curl -sL ${url}/tag/continuous | grep LeoCAD-Linux-.*-arm64.zip | sed -e 's|<.*">||' | sed -e 's|<.*>||')
 
 # archive=${selection}
 
-# curl -sL                  \
-#    --location             \
-#    --remote-header-name   \
-#    --remote-name          \
-#                           ${archive}
+# get #
 
-# unzip ./${archive} -d /usr/bin
+# console.get https://raw.githubusercontent.com/nathaneltitane/leocad/main leocad /usr/bin
+
+cd /tmp || exit
+
+curl -sL                \
+  --location            \
+  --remote-header-name  \
+  --remote-name         \
+                        ${archive}
+
+unzip ./${archive} -d /usr/bin
