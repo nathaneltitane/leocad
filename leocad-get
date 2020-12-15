@@ -15,8 +15,8 @@ script=$(basename -- "${BASH_SOURCE[0]}")
 
 console.get https://raw.githubusercontent.com/nathaneltitane/leocad/main leocad /usr/bin
 
-# curl -sL \
-#    --location            \
-#    --remote-header-name  \
-#    --remote-name         \
+# curl -sL                  \
+#    --location             \
+#    --remote-header-name   \
+#    --remote-name          \
 #        https://github.com/leozide/leocad/releases/download/continuous/LeoCAD-Linux-71ea45f-arm64.zip
