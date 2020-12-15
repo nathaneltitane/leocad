@@ -15,11 +15,12 @@ script=$(basename -- "${BASH_SOURCE[0]}")
 
 console.get https://raw.githubusercontent.com/nathaneltitane/leocad/main leocad /usr/bin
 
-# url=https://github.com/leozide/leocad/releases/tag/continuous
-# file=$(curl -sL "${url}" | grep LeoCAD-Linux-.*-arm64.zip | sed -e 's|<.*">||' | sed -e 's|<.*>||')
+# url=https://github.com/leozide/leocad/releases
+# version=$(curl -sL ${url}/tag/continuous | grep LeoCAD-Linux-.*-arm64.zip | sed -e 's|<.*">||' | sed -e 's|<.*>||')
+# archive=$(echo ${version})
 
 # curl -sL                  \
 #    --location             \
 #    --remote-header-name   \
 #    --remote-name          \
-#                           "${url}"/"${file}"
+#                           ${url}/download/continuous/${archive}
