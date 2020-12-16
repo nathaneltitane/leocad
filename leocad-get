@@ -25,7 +25,7 @@ curl -sL                \
   --remote-name         \
                         ${archive}
 
-unzip					\
-	-d /usr/bin			\
-	-o					\
-						./*.zip
+unzip			\
+	-d /usr/bin	\
+	-o		\
+			./*.zip
