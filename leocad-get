@@ -28,6 +28,7 @@ rm -rf /tmp/*.zip
 cd /tmp || exit
 
 console.dwl "Downloading LeoCAD..."
+echo
 
 curl -sL                \
   --location            \
