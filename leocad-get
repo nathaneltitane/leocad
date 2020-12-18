@@ -13,7 +13,11 @@ script=$(basename -- "${BASH_SOURCE[0]}")
 
 selection=$(curl -sL https://api.github.com/repos/leozide/leocad/releases/latest | jq -r '.assets[0].browser_download_url')
 
-archive=${selection}
+archive="${selection}"
+
+# initial clear #
+
+clear
 
 # clean #
 
@@ -23,13 +27,19 @@ rm -rf /tmp/*.zip
 
 cd /tmp || exit
 
+console.dwl "Downloading LeoCAD..."
+
 curl -sL                \
   --location            \
   --remote-header-name  \
   --remote-name         \
-                        ${archive}
+                        "${archive}"
+# extract #
 
-unzip			\
-	-d /usr/bin	\
-	-o		\
-			./*.zip
+unzip					\
+	-qq					\
+	-d /usr/bin			\
+	-o					\
+						./*.zip
+
+clear
