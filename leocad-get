@@ -38,10 +38,15 @@ curl						\
                         	"${archive}"
 # extract #
 
+console.fwd "Extracting..."
+
+console.silence "
+
 unzip						\
 	-qq						\
 	-d /usr/bin				\
 	-o						\
 							./*.zip
+"
 
-clear
+console.clear
