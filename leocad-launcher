@@ -37,9 +37,10 @@ FILE
 
 if [[ "$print_architecture" = "arm64" ]]
 then
-	sed -i																						\
+	sed																							\
+		-i																						\
 		-e 's|Exec.*|Exec=env LD_PRELOAD=/lib/libandroid-shmem-aarch64.so /usr/bin/leocad|g'	\
-		/usr/bin/leocad.desktop
+																								/usr/bin/leocad.desktop
 fi
 
 chmod a+rx /usr/bin/leocad.desktop

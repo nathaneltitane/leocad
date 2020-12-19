@@ -18,8 +18,9 @@ script=$(basename -- "${BASH_SOURCE[0]}")
 console.inf "Linking configuration."
 echo
 
-[ -f /media/Internal/Drive/Lego/leocad/leocad.conf ]							&& \
-	-p "$PROOT_DIRECTORY"/home/"$user_name"/.config/"LeoCAD Software"				&& \
-	ln -s -f											\											
-	/media/Internal/Drive/Lego/leocad/leocad.conf							\
-		"$PROOT_DIRECTORY"/home/"$user_name"/.config/"LeoCAD Software"/LeoCAD.conf		|| :
+[ -f /media/Internal/Drive/Lego/leocad/leocad.conf ]										\
+	mkdir -p																				\
+		"$PROOT_DIRECTORY"/home/"$user_name"/.config/"LeoCAD Software"						&& \
+	ln -s -f																				\											
+		/media/Internal/Drive/Lego/leocad/leocad.conf										\
+		"$PROOT_DIRECTORY"/home/"$user_name"/.config/"LeoCAD Software"/LeoCAD.conf			|| :
