@@ -30,17 +30,18 @@ cd /tmp || exit
 console.dwl "Downloading LeoCAD..."
 echo
 
-curl -sL                \
-  --location            \
-  --remote-header-name  \
-  --remote-name         \
-                        "${archive}"
+curl						\
+	--silent              	\
+	--location            	\
+	--remote-header-name  	\
+	--remote-name         	\
+                        	"${archive}"
 # extract #
 
-unzip					\
-	-qq					\
-	-d /usr/bin			\
-	-o					\
-						./*.zip
+unzip						\
+	-qq						\
+	-d /usr/bin				\
+	-o						\
+							./*.zip
 
 clear
