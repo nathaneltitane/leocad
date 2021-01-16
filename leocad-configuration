@@ -22,4 +22,4 @@ echo
 	mkdir -p "$PROOT_DIRECTORY"/home/"${USER}"/.config/"LeoCAD Software" || :
 		
 [ -d "$PROOT_DIRECTORY"/home/"${USER}"/.config/"LeoCAD Software" ] && \
-	ln -s -f /media/Internal/Drive/Lego/leocad/leocad.conf "$PROOT_DIRECTORY"/home/"$"${USER}"_name"/.config/"LeoCAD Software"/LeoCAD.conf || :
+	ln -s -f /media/Internal/Drive/Lego/leocad/leocad.conf "$PROOT_DIRECTORY"/home/"${USER}"/.config/"LeoCAD Software"/LeoCAD.conf || :
