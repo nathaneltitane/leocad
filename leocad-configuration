@@ -19,7 +19,7 @@ console.inf "Linking configuration."
 echo
 
 [ -f /media/Internal/Drive/Lego/leocad/leocad.conf ] && \
-	mkdir -p "$PROOT_DIRECTORY"/home/"$"${USER}"_name"/.config/"LeoCAD Software" || :
+	mkdir -p "$PROOT_DIRECTORY"/home/"${USER}"/.config/"LeoCAD Software" || :
 		
-[ -d "$PROOT_DIRECTORY"/home/"$"${USER}"_name"/.config/"LeoCAD Software" ] && \
+[ -d "$PROOT_DIRECTORY"/home/"${USER}"/.config/"LeoCAD Software" ] && \
 	ln -s -f /media/Internal/Drive/Lego/leocad/leocad.conf "$PROOT_DIRECTORY"/home/"$"${USER}"_name"/.config/"LeoCAD Software"/LeoCAD.conf || :
