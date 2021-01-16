@@ -17,10 +17,6 @@ selection=$(curl -sL https://api.github.com/repos/leozide/leocad/releases/latest
 
 archive="${selection}"
 
-# initial clear #
-
-clear
-
 # clean #
 
 rm -rf /tmp/*.zip
